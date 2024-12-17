@@ -207,6 +207,8 @@ FFX_BRIXELIZER_BEGIN_STRUCT(FfxBrixelizerDebugInfo)
     FfxFloat32x4x4       inv_view; ///< Stored in row-major order.
 
     FfxFloat32x4x4       inv_proj; ///< Stored in row-major order.
+    
+    FfxFloat32x4         pos_adjust;
 
     FfxFloat32           t_min;
     FfxFloat32           t_max;

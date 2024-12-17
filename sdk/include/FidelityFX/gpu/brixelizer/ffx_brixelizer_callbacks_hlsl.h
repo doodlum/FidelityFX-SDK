@@ -272,6 +272,7 @@ FfxUInt32 GetBuildInfoNumJobs();
 FfxUInt32 GetDebugInfoMaxAABBs();
 FfxFloat32x4x4 GetDebugInfoInvView();
 FfxFloat32x4x4 GetDebugInfoInvProj();
+FfxFloat32x4 GetDebugInfoPosAdjust();
 FfxFloat32 GetDebugInfoPreviewSDFSolveEpsilon();
 FfxUInt32 GetDebugInfoStartCascadeIndex();
 FfxUInt32 GetDebugInfoEndCascadeIndex();
@@ -495,6 +496,14 @@ FfxUInt32 GetDebugInfoMaxAABBs()
 FfxFloat32x4x4 GetDebugInfoInvView()
 {
     return cbBrixelizerDebugInfo.inv_view;
+}
+#endif
+
+
+#if defined BRIXELIZER_BIND_CB_DEBUG_INFO
+FfxFloat32x4 GetDebugInfoPosAdjust()
+{
+    return cbBrixelizerDebugInfo.pos_adjust;
 }
 #endif
 

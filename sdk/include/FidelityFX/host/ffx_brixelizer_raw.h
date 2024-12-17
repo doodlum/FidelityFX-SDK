@@ -160,6 +160,7 @@ typedef struct FfxBrixelizerDebugVisualizationDescription
 {
     float                             inverseViewMatrix[16];                         ///< Inverse view matrix for the scene in row major order.
     float                             inverseProjectionMatrix[16];                   ///< Inverse projection matrix for the scene in row major order.
+    float                             posAdjust[4];                                  ///< Offset to center world positions to camera.
     FfxBrixelizerTraceDebugModes      debugState;                                    ///< An FfxBrixelizerTraceDebugModes determining what kind of debug output to draw.
     uint32_t                          startCascadeIndex;                             ///< The index of the most detailed cascade in the cascade chain.
     uint32_t                          endCascadeIndex;                               ///< The index of the least detailed cascade in the cascade chain.

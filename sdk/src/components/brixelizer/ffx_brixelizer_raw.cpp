@@ -1676,6 +1676,7 @@ static FfxErrorCode brixelizerDispatchDebugVisualization(FfxBrixelizerRawContext
 
     memcpy(debugInfo.inv_view, debugVisualizationDescription->inverseViewMatrix, sizeof(float) * 16);
     memcpy(debugInfo.inv_proj, debugVisualizationDescription->inverseProjectionMatrix, sizeof(float) * 16);
+    memcpy(debugInfo.pos_adjust, debugVisualizationDescription->posAdjust, sizeof(float) * 4);
 
     debugInfo.t_min                 = debugVisualizationDescription->tMin;
     debugInfo.t_max                 = debugVisualizationDescription->tMax;

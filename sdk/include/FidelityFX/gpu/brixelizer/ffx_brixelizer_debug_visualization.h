@@ -57,7 +57,7 @@ FfxFloat32x3 FFX_RandomColor(FfxFloat32x2 uv) {
 
 FfxFloat32x3 FFX_ViewSpaceToWorldSpace(FfxFloat32x4 view_space_coord)
 {
-    return FFX_TRANSFORM_VECTOR(GetDebugInfoInvView(), view_space_coord).xyz;
+    return FFX_TRANSFORM_VECTOR(GetDebugInfoInvView(), view_space_coord).xyz - GetDebugInfoPosAdjust().xyz;
 }
 
 FfxFloat32x3 FFX_InvProjectPosition(FfxFloat32x3 coord, FfxFloat32x4x4 mat)
