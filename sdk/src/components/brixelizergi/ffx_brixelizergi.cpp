@@ -1447,6 +1447,7 @@ static FfxErrorCode brixelizerGIDispatch(FfxBrixelizerGIContext_Private*        
         memcpy(&giConstants.prev_inv_proj,  prevInvProj,        sizeof(FfxFloat32x4x4));
     }
 
+    memcpy(giConstants.directionalAmbient, pDispatchDescription->directionalAmbient, sizeof(FfxFloat32x4x4));
     memcpy(giConstants.camera_position, pDispatchDescription->cameraPosition, sizeof(FfxFloat32x3));
 
     giConstants.target_width                        = bufferWidth;
