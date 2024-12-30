@@ -545,7 +545,8 @@ FfxUInt32 LoadCascadeBrickMapArrayNonUniform(FfxUInt32 cascadeID, FfxUInt32 elem
 #if defined BRIXELIZER_GI_BIND_SRV_INPUT_ENVIRONMENT_MAP
 FfxFloat32x3 SampleEnvironmentMap(FfxFloat32x3 world_space_reflected_direction)
 {
-    //return pow(max(0, mul(g_sdfgi_constants.directionalAmbient, FfxFloat32x4(-world_space_reflected_direction, 1.0))), 2.2) * GetEnvironmentMapIntensity();
+    if (g_sdfgi_constants.customFlags.x == 1)
+        return pow(max(0, mul(g_sdfgi_constants.directionalAmbient, FfxFloat32x4(-world_space_reflected_direction, 1.0))), 2.2) * GetEnvironmentMapIntensity();
     return g_environment_map.SampleLevel(g_wrap_linear_sampler, world_space_reflected_direction, 0.0).xyz * GetEnvironmentMapIntensity();
 }
 #endif

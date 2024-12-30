@@ -126,6 +126,7 @@ typedef struct FfxBrixelizerGIDispatchDescription
     FfxFloat32x4x4 prevProjection;          ///< The projection matrix for the scene in row major order.
    
     FfxFloat32x4x4 directionalAmbient;
+    FfxFloat32x4 customFlags;
 
     FfxFloat32x3   cameraPosition;          ///< A 3-dimensional vector representing the position of the camera.
     FfxUInt32      startCascade;            ///< The index of the start cascade for use with ray marching with Brixelizer.

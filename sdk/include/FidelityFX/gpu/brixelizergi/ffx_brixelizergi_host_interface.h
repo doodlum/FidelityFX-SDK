@@ -57,6 +57,7 @@ struct FfxBrixelizerGIConstants
     FfxFloat32x4x4 prev_inv_proj;
 
     FfxFloat32x4x4 directionalAmbient;
+    FfxFloat32x4 customFlags;
 
     FfxUInt32   target_height;
     FfxUInt32   target_width;
